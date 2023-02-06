@@ -1,9 +1,6 @@
 package com.dependency.injection.DI;
 
-import com.dependency.injection.DI.controllers.ConstructorInjectedController;
-import com.dependency.injection.DI.controllers.MyController;
-import com.dependency.injection.DI.controllers.PropertyInjectedController;
-import com.dependency.injection.DI.controllers.SetterInjectedController;
+import com.dependency.injection.DI.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -27,6 +24,9 @@ public class DiApplication {
 
 		var constructorInjectedController = (ConstructorInjectedController) springContext.getBean("constructorInjectedController");
 		System.out.println(constructorInjectedController.executeController());
+
+		var primaryInjectedController = (PrimaryBeanController) springContext.getBean("primaryBeanController");
+		System.out.println(primaryInjectedController.executeController());
 	}
 
 }
