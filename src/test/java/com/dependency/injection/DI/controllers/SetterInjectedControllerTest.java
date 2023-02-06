@@ -20,6 +20,6 @@ class SetterInjectedControllerTest {
 
     @Test
     void executeController() {
-        assertEquals(controller.executeController(), "Executing to Setter Interface");
+        assertEquals(controller.executeController(), "Executing to the interface");
     }
 }

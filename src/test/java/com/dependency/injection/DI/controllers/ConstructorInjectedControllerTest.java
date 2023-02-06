@@ -16,6 +16,6 @@ class ConstructorInjectedControllerTest {
 
     @Test
     void executeController() {
-        assertEquals(controller.executeController(), "Executing through Constructor Injected Controller");
+        assertEquals(controller.executeController(), "Executing to the interface");
     }
 }
