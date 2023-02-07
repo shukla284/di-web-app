@@ -3,7 +3,9 @@ package com.dependency.injection.DI;
 import com.dependency.injection.DI.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
+@ComponentScan(basePackages = { "com.dependency.injection.DI", "com.dependency.injection.profiles" })
 @SpringBootApplication
 public class DiApplication {
 
@@ -27,6 +29,9 @@ public class DiApplication {
 
 		var primaryInjectedController = (PrimaryBeanController) springContext.getBean("primaryBeanController");
 		System.out.println(primaryInjectedController.executeController());
+
+		var profileController = (ProfileController) springContext.getBean("profileController");
+		System.out.println(profileController.executeController());
 	}
 
 }
